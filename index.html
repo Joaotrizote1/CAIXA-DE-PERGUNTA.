@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa de Pergunta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .resposta {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>O que é JavaScript ?</h2>
+    <input type="text" id="pergunta" placeholder="Por favor, digite sua resposta.">
+    <button onclick="mostrarResposta('pergunta', 'textoResposta')">Enviar</button>
+    
+    <div class="resposta" id="resposta" style="display: none;">
+        <strong>Resposta:</strong> <span id="textoResposta"></span>
+    </div>
+</div>
+
+<script>
+    function mostrarResposta() {
+        const pergunta = document.getElementById('pergunta').value;
+        const respostaDiv = document.getElementById('resposta');
+        const textoResposta = document.getElementById('textoResposta');
+        
+        if (pergunta.trim() === "") {
+            alert("Por favor, insira uma pergunta.");
+            return;
+        }
+
+        // Aqui você pode definir a lógica da resposta
+        textoResposta.innerText = " O javascript é uma linguagem de programação. " + pergunta;
+        
+        respostaDiv.style.display = "block";
+    }
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa de Pergunta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .resposta {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>O que é css ?</h2>
+
+    <div>
+        <input type="text" id="pergunta1" placeholder="Por favor, digite sua resposta,">
+        <button onclick="mostrarResposta('pergunta1', 'textoResposta1')">Enviar</button>
+        
+        <div class="resposta" id="resposta1" style="display: none;">
+            <strong>Resposta:</strong> <span id="textoResposta1"></span>
+        </div>
+    </div>
+
+    <div>
+       
+</div>
+
+<script>
+    function mostrarResposta(perguntaId, textoRespostaId) {
+        const pergunta = document.getElementById(perguntaId).value;
+        const respostaDiv = document.getElementById(`resposta${textoRespostaId.charAt(textoRespostaId.length - 1)}`);
+        const textoResposta = document.getElementById(textoRespostaId);
+        
+        if (pergunta.trim() === "") {
+            alert("Por favor, insira uma resposta.");
+            return;
+        }
+
+        // Aqui você pode definir a lógica da resposta
+        textoResposta.innerText = "O css é uma linguagem de programação de estilização. " + pergunta;
+        
+        respostaDiv.style.display = "block";
+    }
+</script>
+
+</body>
+</html>
